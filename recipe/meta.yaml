@@ -23,11 +23,12 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
     - r-dbi
     - r-rcolorbrewer
-    - r-rmysql
+    - r-rmariadb
     - r-data.table >=1.9.4
     - r-numderiv
     - r-sqldf
@@ -35,7 +36,7 @@ requirements:
     - r-base
     - r-dbi
     - r-rcolorbrewer
-    - r-rmysql
+    - r-rmariadb
     - r-data.table >=1.9.4
     - r-numderiv
     - r-sqldf
