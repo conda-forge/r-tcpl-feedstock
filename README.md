@@ -3,7 +3,7 @@ About r-tcpl
 
 Home: https://github.com/USEPA/CompTox-ToxCast-tcpl
 
-Package license: GPL-2.0-only
+Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tcpl-feedstock/blob/main/LICENSE.txt)
 
