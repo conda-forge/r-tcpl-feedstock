@@ -1,4 +1,4 @@
-{% set version = "3.0.1" %}
+{% set version = "3.1.0" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tcpl_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tcpl/tcpl_{{ version }}.tar.gz
-  sha256: 04f6f396c1dccc061b6cb6f614374401c97ce0e25febf7b29e9db8d6c5285cf7
+  sha256: ebf400bfb8a0711407e61f0f5552dda52069e8216aa4075171a225e267926568
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
