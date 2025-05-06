@@ -27,11 +27,12 @@ requirements:
     - r-dbi
     - r-rcolorbrewer
     - r-rmariadb
-    - r-ctxr
+    - r-ctxr >=1.1.0
     - r-data.table >=1.15.0
     - r-dplyr
     - r-ggplot2
     - r-gridextra
+    - r-gt
     - r-numderiv
     - r-plotly
     - r-rlang
@@ -39,16 +40,18 @@ requirements:
     - r-stringr
     - r-tcplfit2
     - r-tidyr
+    - r-viridis
   run:
     - r-base
     - r-dbi
     - r-rcolorbrewer
     - r-rmariadb
-    - r-ctxr
+    - r-ctxr >=1.1.0
     - r-data.table >=1.15.0
     - r-dplyr
     - r-ggplot2
     - r-gridextra
+    - r-gt
     - r-numderiv
     - r-plotly
     - r-rlang
@@ -56,6 +59,7 @@ requirements:
     - r-stringr
     - r-tcplfit2
     - r-tidyr
+    - r-viridis
 
 test:
   commands:
