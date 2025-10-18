@@ -1,4 +1,4 @@
-{% set version = "3.3.0" %}
+{% set version = "3.3.1" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,14 +9,18 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tcpl_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tcpl/tcpl_{{ version }}.tar.gz
-  sha256: 56a35a7f79afba20b237310f7fe9a412ba6d5111b1daa2cd55150d7b030be08c
+  sha256: f6a709e9ce7da8a37dd97a583badcc22a49545a2e3ebd12cc304db27e50b2caf
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
+  missing_dso_whitelist:
+    - '*/R.dll'        # [win]
+    - '*/Rblas.dll'    # [win]
+    - '*/Rlapack.dll'  # [win]
 
 requirements:
   build:
@@ -27,10 +31,10 @@ requirements:
     - r-dbi
     - r-rcolorbrewer
     - r-rmariadb
-    - r-ctxr >=1.1.0
+    - r-ctxr >=1.1.3
     - r-data.table >=1.15.0
     - r-dplyr
-    - r-ggplot2
+    - r-ggplot2 >=3.5.2
     - r-gridextra
     - r-gt
     - r-numderiv
@@ -46,10 +50,10 @@ requirements:
     - r-dbi
     - r-rcolorbrewer
     - r-rmariadb
-    - r-ctxr >=1.1.0
+    - r-ctxr >=1.1.3
     - r-data.table >=1.15.0
     - r-dplyr
-    - r-ggplot2
+    - r-ggplot2 >=3.5.2
     - r-gridextra
     - r-gt
     - r-numderiv
